@@ -1,0 +1,82 @@
+\documentclass[a4paper, 12pt]{article}
+\input{include/preambule.tex}
+\input{include/self_commands.tex}
+
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+
+\begin{document}
+    \input{title.tex}
+
+\begin{remark}
+    Теорема о единственном продолжении неотрицательной ограниченной счётно-аддитивной меры с кольца на порождённое им $\sigma$-кольцо с сохранением $sigma$-аддитивности меры - \underline{главная теорема курса}
+\end{remark}
+
+\begin{designation}
+Пусть $K$ - множественное кольцо $\xrightarrow[\sigma_{\text{адд}}]{\mu} [0, N]$. Тогда $\bigcup K := E := \bigcup \limits_{A \in K} A = \bigcup \{A | A \in K\} $.
+\end{designation}
+
+\begin{definition}
+    Множество $M \in E$ назовём $K_{\sigma}$-покрываемым, если $\exists (A_1, A_2, \dots) \in K^{\mathbb{N}}$ такое, 
+    что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv \cuparr{n = 1}{\infty} ( \underbrace{\bigcup \limits_{k = 1}^{n} A_k}_{\in K} ) \equiv \bigsqcup \limits_{m = 1}^{\infty} ( \underbrace{A_m \setminus  \bigcup \left\{ A_k \big|_: k < m \right\}}_{\in K} ) $.
+\end{definition}
+
+\begin{designation}
+    $\mathcal{P}_{K_{\sigma}}(E) = \left\{M |\, M \text{ является } K_{\sigma}\text{-покрываемым}\right\}$.
+\end{designation}
+
+$$\mu^*(M) = \inf \{\sum \limits_{k = 1}^{\infty} \mu(C_k) |\, \forall k \in N\, C_k \in K;\; M \subset \bigsqcup \limits_{k = 1}^{\infty} C_k \} \leqslant N$$
+$$\rho^*_{\mu}: \mathcal{P}_{K_{\sigma}}(E) \times \mathcal{P}_{K_{\sigma}}(E) \rightarrow [0, N]: (A, B) \rightarrow \mu^*(A \Delta B), \, \forall M \in \mathcal{P}_{K_{\sigma}}(E)$$ 
+$$\mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
+
+
+Будем называть $\mu^*$ внешней мерой, а $\mu_*$ - внутренней.
+
+\begin{definition}
+    $\mu*$-измеримыми подмножества в $E \equiv \bigcup K$ назовём такие $M \in \mathcal{P}_{K_{\sigma}}(E)$, что для некоторой $(A_1, A_2, \dots, A_n, \dots) \in K^{\mathbb{N}}$ такие, что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv U$, выполнено соотношение:
+    $$ \mu^* (M) + \mu^*(U \setminus M) = \mu^*(U) \equiv \sup \limits_{n \in \mathbb{N}}\left\{ \mu \left( \bigcup \limits_{k = 1}^{n} A_k \right)\right\} (\text{конструкция Каратеодори})$$
+\end{definition}
+
+\begin{definition}
+    $\rho_{\mu}^*$-измеримым называется такое $M \in \mathcal{P}_{K_{\sigma}}(E)$, что $\exists (A_{k,l})_{k,l = 1}^{\infty} \in K^{\mathbb{N} \times \mathbb{N}}$, что $\rho_{\mu}^*\left(\bigcap \limits_{l=1}^{\infty}\left(\bigcup \limits_{k = 1}^{\infty} A_{k,l} \right), M\right) = 0$ (Лебег).
+\end{definition}
+
+\begin{problem*}
+    Система $\mu^*$-измеримых подмножеств в $E$ совпадает с системой $\rho^*_{\mu}$-измеримый подмножеств $E$, является $\sigma$-кольцом, которое называется $\sigma$-кольцом множеств, измеримых относительно естественного продолжения меры $\mu$, обозначим $\bar{K}^{\mu}$.
+
+    $$ \mu^* \big|_{\bar{K}^{\mu}} =: \bar{\mu} - ~\text{$\sigma$-адд}$$
+    $$ \bar{\mu} \big|_{K} = \mu^* \big|_{K^{\mu}} = \mu$$
+\end{problem*}
+
+\begin{remark}
+    Вообще говоря, $\mu^* \big|_{\bar{K}^{\mu}} \neq \bar{\mu}$
+\end{remark}
+
+\begin{remark}
+   $\rho_{\bar{\mu}}$ порождает ту же самую метрику на фактор пространстве $\bar{K}/\tilde{\rho}_{\bar{\mu}}$, что и копия аналогично получаемой метрики из пополнения полуметрического пространства $(K, \rho_{\mu})$, т.е. классу эквивалентных фундаментальных последовательностей будет соответствовать один класс эквивалентных измеримых множеств из $(\bar{K}^{\mu}, \rho_{\bar{\mu}})$.
+\end{remark}
+
+\begin{designation}
+    $\mathscr{B}(\mathbb{R}^n)$ - борелевская $\sigma$-алгебра, т.е. наименьшее $\sigma$-кольцо или $\sigma$-алгебра, содержащая все декартовы произведения одномерных промежутков. Она же порождается и открытами шарами, и просто открытыми множествами в $\mathbb{R}^d$, и значит замкнутыми.
+\end{designation}
+
+
+\subsection*{Конструкция $d$-мерной меры Лебега.}
+
+\begin{enumerate}[a)]
+    \item  1
+    \item  2
+    \item 
+\end{enumerate}
+
+\begin{theorem}
+    Определение $\lambda ^ d$ корректно: $\lambda ^ d$ называется полной $d$-мерной мерой.
+\end{theorem}
+
+\begin{remark}
+$\mathtt{Card}(B(\mathbb{R}^d)) = \complement$ (continuum), где $\mathfrak{Card}$ - количество элементов (кардинальное число), мощность.
+\end{remark}
+
+
+
+\end{document}
