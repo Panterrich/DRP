@@ -13,12 +13,12 @@
 \end{remark}
 
 \begin{designation}
-Пусть $K$ -- множественное кольцо $\xrightarrow[\sigma_{\text{адд}}]{\mu} [0, N]$. 
+Пусть $K$ -- теоретико-множественное кольцо $\xrightarrow[\sigma_{\text{адд}}]{\mu} [0, N]$. 
 $$ \text{Тогда } \bigcup K := E := \bigcup \limits_{A \in K} A = \bigcup \{A\, |\, A \in K\}.$$
 \end{designation}
 
 \begin{definition}
-    Множество $M \in E$ назовём $K_{\sigma}$-покрываемым, если $\exists (A_1, A_2, \dots) \in K^{\mathbb{N}}$ такая, 
+    Множество $M \subset E$ назовём $K_{\sigma}$-покрываемым, если $\exists (A_1, A_2, \dots) \in K^{\mathbb{N}}$ такая, 
     что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv \cuparr{n = 1}{\infty} ( \underbrace{\bigcup \limits_{k = 1}^{n} A_k}_{\in K} ) \equiv \bigsqcup \limits_{m = 1}^{\infty} ( \underbrace{A_m \setminus  \bigcup \left\{ A_k \, \big|_: \, k < m \right\}}_{\in K} ) $.
 \end{definition}
 
@@ -28,13 +28,13 @@ $$ \text{Тогда } \bigcup K := E := \bigcup \limits_{A \in K} A = \bigcup \{
 
 $$\mu^*(M) = \inf \left\{\sum \limits_{k = 1}^{\infty} \mu(C_k) \,\big|\, \forall k \in N\, C_k \in K;\; M \subset \bigsqcup \limits_{k = 1}^{\infty} C_k \right\} \leqslant N$$
 $$\rho^*_{\mu}: \mathcal{P}_{K_{\sigma}}(E) \times \mathcal{P}_{K_{\sigma}}(E) \rightarrow [0, N]: (A, B) \rightarrow \mu^*(A \Delta B),$$ 
-$$\forall M \in \mathcal{P}_{K_{\sigma}}(E) \,\, \mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
+$$\forall M \in \mathcal{P}_{K_{\sigma}}(E) \,\, \mu_*(M) = \sup \{ \mu(A) \,\big|\, A \in K, \, A \subset M  \} \leqslant N$$
 
 
 Будем называть $\mu^*$ внешней мерой, а $\mu_*$ -- внутренней.
 
 \begin{definition}
-    $\mu^*$-измеримыми подмножества в $E \equiv \bigcup K$ назовём такие $M \in \mathcal{P}_{K_{\sigma}}(E)$, что для некоторой $(A_1, A_2, \dots, A_n, \dots) \in K^{\mathbb{N}}$ такая, что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv U$, выполнено соотношение:
+    $\mu^*$-измеримыми подмножествами в $E \equiv \bigcup K$ назовём такие $M \in \mathcal{P}_{K_{\sigma}}(E)$, что для некоторой $(A_1, A_2, \dots, A_n, \dots) \in K^{\mathbb{N}}$ такая, что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv U$, выполнено соотношение:
     $$ \mu^* (M) + \mu^*(U \setminus M) = \mu^*(U) \equiv \sup \limits_{n \in \mathbb{N}}\left\{ \mu \left( \bigcup \limits_{k = 1}^{n} A_k \right)\right\} (\text{конструкция Каратеодори}).$$
 \end{definition}
 
