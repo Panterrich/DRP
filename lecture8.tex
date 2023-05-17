@@ -9,47 +9,49 @@
     \input{title.tex}
 
 \begin{remark}
-    Теорема о единственном продолжении неотрицательной ограниченной счётно-аддитивной меры с кольца на порождённое им $\sigma$-кольцо с сохранением $sigma$-аддитивности меры --- \underline{главная теорема курса}
+    Теорема о единственном продолжении неотрицательной ограниченной счётно-аддитивной меры с кольца на порождённое им $\sigma$-кольцо с сохранением $\sigma$-аддитивности меры -- \underline{главная теорема курса}.
 \end{remark}
 
 \begin{designation}
-Пусть $K$ --- множественное кольцо $\xrightarrow[\sigma_{\text{адд}}]{\mu} [0, N]$. Тогда $\bigcup K := E := \bigcup \limits_{A \in K} A = \bigcup \{A | A \in K\} $.
+Пусть $K$ -- множественное кольцо $\xrightarrow[\sigma_{\text{адд}}]{\mu} [0, N]$. 
+$$ \text{Тогда } \bigcup K := E := \bigcup \limits_{A \in K} A = \bigcup \{A\, |\, A \in K\}.$$
 \end{designation}
 
 \begin{definition}
-    Множество $M \in E$ назовём $K_{\sigma}$-покрываемым, если $\exists (A_1, A_2, \dots) \in K^{\mathbb{N}}$ такое, 
-    что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv \cuparr{n = 1}{\infty} ( \underbrace{\bigcup \limits_{k = 1}^{n} A_k}_{\in K} ) \equiv \bigsqcup \limits_{m = 1}^{\infty} ( \underbrace{A_m \setminus  \bigcup \left\{ A_k \big|_: k < m \right\}}_{\in K} ) $.
+    Множество $M \in E$ назовём $K_{\sigma}$-покрываемым, если $\exists (A_1, A_2, \dots) \in K^{\mathbb{N}}$ такая, 
+    что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv \cuparr{n = 1}{\infty} ( \underbrace{\bigcup \limits_{k = 1}^{n} A_k}_{\in K} ) \equiv \bigsqcup \limits_{m = 1}^{\infty} ( \underbrace{A_m \setminus  \bigcup \left\{ A_k \, \big|_: \, k < m \right\}}_{\in K} ) $.
 \end{definition}
 
 \begin{designation}
-    $\mathcal{P}_{K_{\sigma}}(E) = \left\{M |\, M \text{ является } K_{\sigma}\text{-покрываемым}\right\}$.
+    $\mathcal{P}_{K_{\sigma}}(E) = \left\{M \,\big|\, M \text{ является } K_{\sigma}\text{-покрываемым}\right\}$.
 \end{designation}
 
-$$\mu^*(M) = \inf \{\sum \limits_{k = 1}^{\infty} \mu(C_k) |\, \forall k \in N\, C_k \in K;\; M \subset \bigsqcup \limits_{k = 1}^{\infty} C_k \} \leqslant N$$
-$$\rho^*_{\mu}: \mathcal{P}_{K_{\sigma}}(E) \times \mathcal{P}_{K_{\sigma}}(E) \rightarrow [0, N]: (A, B) \rightarrow \mu^*(A \Delta B), \, \forall M \in \mathcal{P}_{K_{\sigma}}(E)$$ 
-$$\mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
+$$\mu^*(M) = \inf \left\{\sum \limits_{k = 1}^{\infty} \mu(C_k) \,\big|\, \forall k \in N\, C_k \in K;\; M \subset \bigsqcup \limits_{k = 1}^{\infty} C_k \right\} \leqslant N$$
+$$\rho^*_{\mu}: \mathcal{P}_{K_{\sigma}}(E) \times \mathcal{P}_{K_{\sigma}}(E) \rightarrow [0, N]: (A, B) \rightarrow \mu^*(A \Delta B),$$ 
+$$\forall M \in \mathcal{P}_{K_{\sigma}}(E) \,\, \mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
 
 
-Будем называть $\mu^*$ внешней мерой, а $\mu_*$ --- внутренней.
+Будем называть $\mu^*$ внешней мерой, а $\mu_*$ -- внутренней.
 
 \begin{definition}
-    $\mu*$-измеримыми подмножества в $E \equiv \bigcup K$ назовём такие $M \in \mathcal{P}_{K_{\sigma}}(E)$, что для некоторой $(A_1, A_2, \dots, A_n, \dots) \in K^{\mathbb{N}}$ такие, что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv U$, выполнено соотношение:
-    $$ \mu^* (M) + \mu^*(U \setminus M) = \mu^*(U) \equiv \sup \limits_{n \in \mathbb{N}}\left\{ \mu \left( \bigcup \limits_{k = 1}^{n} A_k \right)\right\} (\text{конструкция Каратеодори})$$
+    $\mu^*$-измеримыми подмножества в $E \equiv \bigcup K$ назовём такие $M \in \mathcal{P}_{K_{\sigma}}(E)$, что для некоторой $(A_1, A_2, \dots, A_n, \dots) \in K^{\mathbb{N}}$ такая, что $M \subset \bigcup \limits_{k = 1}^{\infty} A_k \equiv U$, выполнено соотношение:
+    $$ \mu^* (M) + \mu^*(U \setminus M) = \mu^*(U) \equiv \sup \limits_{n \in \mathbb{N}}\left\{ \mu \left( \bigcup \limits_{k = 1}^{n} A_k \right)\right\} (\text{конструкция Каратеодори}).$$
 \end{definition}
 
 \begin{definition}
-    $\rho_{\mu}^*$-измеримым называется такое $M \in \mathcal{P}_{K_{\sigma}}(E)$, что $\exists (A_{k,l})_{k,l = 1}^{\infty} \in K^{\mathbb{N} \times \mathbb{N}}$, что $\rho_{\mu}^*\left(\bigcap \limits_{l=1}^{\infty}\left(\bigcup \limits_{k = 1}^{\infty} A_{k,l} \right), M\right) = 0$ (Лебег).
+    $\rho_{\mu}^*$-измеримым называется такое $M \in \mathcal{P}_{K_{\sigma}}(E)$, что $\exists (A_{k,l})_{k,l = 1}^{\infty} \in K^{\mathbb{N} \times \mathbb{N}}$, что 
+    $$\rho_{\mu}^*\left(\bigcap \limits_{l=1}^{\infty}\left(\bigcup \limits_{k = 1}^{\infty} A_{k,l} \right), M\right) = 0 \text{ (Лебег).}$$
 \end{definition}
 
 \begin{problem}[*]
-    Система $\mu^*$-измеримых подмножеств в $E$ совпадает с системой $\rho^*_{\mu}$-измеримый подмножеств $E$, является $\sigma$-кольцом, которое называется $\sigma$-кольцом множеств, измеримых относительно естественного продолжения меры $\mu$, обозначим $\bar{K}^{\mu}$.
+    Система $\mu^*$-измеримых подмножеств в $E$ совпадает с системой $\rho^*_{\mu}$-измеримых подмножеств в $E$, является $\sigma$-кольцом, которое называется $\sigma$-кольцом множеств, измеримых относительно естественного продолжения меры $\mu$, обозначим $\bar{K}^{\mu}$.
 
-    $$ \mu^* \big|_{\bar{K}^{\mu}} =: \bar{\mu} - ~\text{$\sigma$-адд}$$
-    $$ \bar{\mu} \big|_{K} = \mu^* \big|_{K^{\mu}} = \mu$$
+    $$ \mu^* \big|_{\bar{K}^{\mu}} =: \bar{\mu} - ~\text{$\sigma$-аддитивна}$$
+    $$ \bar{\mu} \big|_{K} = \mu^* \big|_{K^{\mu}} = \mu.$$
 \end{problem}
 
 \begin{remark}
-    Вообще говоря, $\mu^* \big|_{\bar{K}^{\mu}} \neq \bar{\mu}$
+    Вообще говоря, $\mu^* \big|_{\bar{K}^{\mu}} \neq \bar{\mu}$.
 \end{remark}
 
 \begin{remark}
@@ -57,7 +59,7 @@ $$\mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
 \end{remark}
 
 \begin{designation}
-    $\mathscr{B}(\mathbb{R}^n)$ --- борелевская $\sigma$-алгебра, т.е. наименьшее $\sigma$-кольцо или $\sigma$-алгебра, содержащая все декартовы произведения одномерных промежутков. Она же порождается и открытами шарами, и просто открытыми множествами в $\mathbb{R}^d$, и значит замкнутыми.
+    $\mathscr{B}(\mathbb{R}^n)$ -- борелевская $\sigma$-алгебра, т.е. наименьшее $\sigma$-кольцо или $\sigma$-алгебра, содержащая все декартовы произведения одномерных промежутков. Она же порождается и открытыми шарами, и просто открытыми множествами в $\mathbb{R}^d$, и значит замкнутыми.
 \end{designation}
 
 
@@ -67,18 +69,19 @@ $$\mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
     \item  
     \begin{definition}
         Рассматриваем те ограниченные множества $M \subset [-N, N]^d \subset \mathbb{R}^d$, что $\mathds{1}_{M \subset [-N, N]^d} \in R \left([-N, N]^d \right)$, такие $M$ называются измеримыми по Жордану, 
-        $$ \int \limits_{-N}^{N} \dots \int \limits_{-N}^{N} \mathds{1}_{M \subset [-N, N]^d} (x_1, ..., x_d) dx_1 \dots dx_d = |M|_d - \text{ $d$-мерная мера Жордана}$$
+        $$ \int \limits_{-N}^{N} \dots \int \limits_{-N}^{N} \mathds{1}_{M \subset [-N, N]^d} (x_1, ..., x_d) dx_1 \dots dx_d = |M|_d - \text{ $d$-мерная мера Жордана.}$$
     \end{definition}
     \item Кольцо всех измеримых по Жордану подмножеств в фиксированном кубе не является $\sigma$-кольцом, но мера Жордана ($d$-мерная) на этом кольце счётно-аддитивная, и мы можем по теореме продолжить:
     
-    Пусть $J([-N, N])$ --- кольцо измеримых по Жордану подмножеств в $[-N, N]^d$, $\lambda_{J([-N, N]^d)} \equiv \lambda_{J, N}^d: J([-N, N]^d) \rightarrow [0, +\infty): M \rightarrow |M|_d$, тогда $\overline{\lambda_{J, N}^d} \equiv \lambda^d_N : \overline{J([-N, N]^d)}^{\lambda_{J, N}^{d}} \equiv M_{\lambda, N}^d \rightarrow [0, (2N)^d]$, где $\overline{J([-N, N]^d)}^{\lambda_{J, N}^{d}}$ --- измеримые по Лебегу подмножества куба
+    Пусть $J([-N, N]^d)$ -- кольцо измеримых по Жордану подмножеств в $[-N, N]^d$, $\lambda_{J([-N, N]^d)} \equiv \lambda_{J, N}^d: J([-N, N]^d) \rightarrow [0, +\infty): M \rightarrow |M|_d$, тогда $\overline{\lambda_{J, N}^d} \equiv \lambda^d_N : \overline{J([-N, N]^d)}^{\lambda_{J, N}^{d}} \equiv M_{\lambda, N}^d \rightarrow [0, (2N)^d]$, где $\overline{J([-N, N]^d)}^{\lambda_{J, N}^{d}}$ -- измеримые по Лебегу подмножества куба.
 
     \begin{remark}
-        $0 < N_1 < N_2 \Rightarrow \forall m \in M_{\lambda, N_1}^d \, \lambda_{N_1}^d(m) = \lambda_{N_2}^d(m)$, т.е $\lambda_{N_1}^d = \lambda_{N_2} \big|_{M_{\lambda, N_1}^d}$
+        $0 < N_1 < N_2 \Rightarrow \forall m \in M_{\lambda, N_1}^d \, \lambda_{N_1}^d(m) = \lambda_{N_2}^d(m)$, т.е $\lambda_{N_1}^d = \lambda_{N_2} \big|_{M_{\lambda, N_1}^d}$.
     \end{remark}
 
     \begin{problem}
-        $\sigma_{\varkappa} \left(\bigcup \limits_{N > 0} M_{\lambda, N}^d \right) = \sigma_{\varkappa} \left(\bigcup \limits_{N \in \mathbb{N}} M_{\lambda, N}^d \right) = \left\{ \bigcup \limits_{k = 1}^{\infty} A_k | A_k \in M_{\lambda, N}^d \right\} \equiv M_{\lambda}^d \overset{*}{\Rightarrow} \equiv \mathscr{B}(\mathbb{R}^d)$, где $M_{\lambda}^d$ - система всех измеримых относительнго (полной) меры Лебега в $\mathbb{R}^d$ подмножеств.
+        $$\sigma_{\varkappa} \left(\bigcup \limits_{N > 0} M_{\lambda, N}^d \right) = \sigma_{\varkappa} \left(\bigcup \limits_{N \in \mathbb{N}} M_{\lambda, N}^d \right) = \left\{ \bigcup \limits_{k = 1}^{\infty} A_k \,\big|\, A_k \in M_{\lambda, N}^d \right\} \equiv M_{\lambda}^d \overset{*}{\Rightarrow} \equiv \mathscr{B}(\mathbb{R}^d),$$
+        где $M_{\lambda}^d$ - система всех измеримых относительнго (полной) меры Лебега в $\mathbb{R}^d$ подмножеств.
     \end{problem}
 
     \begin{definition}
@@ -91,7 +94,7 @@ $$\mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
     \end{theorem}
     
     \begin{remark}
-        $Card(\mathcal{B}(\mathbb{R}^d)) = \complement$ (continuum), где $Card$ --- количество элементов (кардинальное число), мощность.
+        $Card(\mathcal{B}(\mathbb{R}^d)) = \complement$ (continuum), где $Card$ -- количество элементов (кардинальное число), мощность.
     \end{remark}
 
     \begin{example}
@@ -100,60 +103,63 @@ $$\mu_*(M) = \sup \{ \mu(A) |\, A \in K, \, A \subset M  \} \leqslant N$$
     \end{example}
 
     \begin{definition}
-        Пусть $S$ --- система множеств, $\mu:\, S \rightarrow [0, +\infty]$, $\mu$ называется полной, если $\forall A \in S(\mu (A) = 0 \Rightarrow \forall B \subset A \, B \in S \& \mu (B) = 0)$. В этом случае и саму систему $S$ называют полной относительно меры $\mu$.
+        Пусть $S$ -- система множеств, $\mu:\, S \rightarrow [0, +\infty]$, $\mu$ называется полной, если $\forall A \in S(\mu (A) = 0 \Rightarrow \forall B \subset A: \, B \in S \,\&\, \mu (B) = 0)$. В этом случае и саму систему $S$ называют полной относительно меры $\mu$.
     \end{definition}
 
     \begin{consequence}
-        $\lambda^d$ - полна, $M_{\lambda}^d$ --- полна относительно $\lambda^d$.
+        $\lambda^d$ - полна, $M_{\lambda}^d$ -- полна относительно $\lambda^d$.
     \end{consequence}
     
     \begin{definition}
-        $\sigma$-аддитивная неотрицательная мера на $\sigma$-алгребре $\upsigma$ с единицей $E$ называется $\sigma$-конечной, если $\exists (A_1, A_2, \dots) \in \upsigma^{\mathbb{N}}$, такие что
-        \begin{enumerate}
+        $\sigma$-аддитивная неотрицательная мера на $\sigma$-алгребре $\text{\textscripta}$ с единицей $E$ называется $\sigma$-конечной, если $\exists (A_1, A_2, \dots) \in \text{\textscripta}^{\mathbb{N}}$ такие, что
+        \begin{enumerate}[1)]
             \item $\cuparr{n = 1}{\infty} A_n = E$
             \item $\forall n \in N\, \mu A_n < \infty$
         \end{enumerate}
     \end{definition}
 
     \begin{definition}
-        Пополнение неотрицательной $\sigma$ конечной меры $\mu$ заданной на $\sigma$-алгебре $\upsigma$ --- это новая мера $\bar{\mu}: \bar{\upsigma} \rightarrow [0, +\infty]$, такая что $\bar{\upsigma} = \left\{ \bigcup \limits_{k = 1}^{\infty} A_k | \forall k \mu* A_k = 0\right\} \bigcup \upsigma \equiv \left\{ B \subset (\bigcup \upsigma) | \exists A \in \upsigma\, \mu*(A \Delta B) = 0 \right\}$.
+        Пополнение неотрицательной $\sigma$ конечной меры $\mu$ заданной на $\sigma$-алгебре $\text{\textscripta}$ -- это новая мера $\bar{\mu}: \bar{\text{\textscripta}} \rightarrow [0, +\infty]$ такая, что 
+        $$\bar{\text{\textscripta}} = \left\{ \bigcup \limits_{k = 1}^{\infty} A_k \,\big|\, \forall k \, \mu^* A_k = 0\right\} \bigcup \text{\textscripta} \equiv \left\{ B \subset \left(\bigcup \text{\textscripta}\right) \,\big|\, \exists A \in \text{\textscripta}\,\, \mu^*(A \Delta B) = 0 \right\}.$$
     \end{definition}
     И если $A$ и $B$ как только что описано, то $\bar{\mu} B = \mu A$.
 
-    Часто вводится $d$-мерная борелевская мера Лебега $\lambda^d_{\mathcal{B}} = \lambda^d \big|_{\mathcal{B}(\mathbb{R}^d)}$
+    Часто вводится $d$-мерная борелевская мера Лебега $\lambda^d_{\mathcal{B}} = \lambda^d \big|_{\mathcal{B}(\mathbb{R}^d)}$.
 
 \end{enumerate}
 
 \begin{definition}
-    Пусть $L$ --- линейное(векторное) пространство над $\mathbb{K} \in \{\mathbb{R}, \mathbb{C}\}$, $l:L \rightarrow K$ называется линейной (однородной) $\Leftrightarrow \forall v, w \in L, \, \forall c \in K$, 
-    $$l(v + cw) = l(v) + cl(w),$$ 
-    $c = 1$ --- аддитивность, $v = 0$ --- однородность 1-ой степени.
+    Пусть $L$ -- линейное (векторное) пространство над $\mathbb{K} \in \{\mathbb{R}, \mathbb{C}\}$, $\ell:L \rightarrow K$ называется линейной (однородной) $\Leftrightarrow \forall v, w \in L, \, \forall c \in \mathbb{K}$, 
+    $$\ell(v + cw) = \ell(v) + c\ell(w),$$ 
+    $c = 1$ -- аддитивность, $v = 0$ -- однородность 1-ой степени.
 \end{definition}
 
 \begin{definition}
-    Пусть $L$ как выше, $L_0 \subset L$, $f: L_0  \rightarrow \mathbb{K}$ называется линейной (однородной), если $\exists$ линейная $l: L \rightarrow \mathbb{K}$ такая, что $l \big|_{L_0} = f$.
+    Пусть $L$ как выше, $L_0 \subset L$, $f: L_0  \rightarrow \mathbb{K}$ называется линейной (однородной), если $\exists$ линейная $\ell: L \rightarrow \mathbb{K}$ такая, что $\ell \big|_{L_0} = f$.
 \end{definition}
 
 \begin{problem}
-    Пусть $K$ --- теоретико-множественное кольцо, $\mu: K \rightarrow \mathbb{K}$ аддитивна, $E = \bigcup K$, $L_0 = \{ \mathds{1}_{A \subset E} \big|_: A \in K\}, L_0 \subset \mathbb{K}^E$, $l_{\mu} (\mathds{1}_{A \subset E} ) = \mu (A) \forall A \in K$. $l_{\mu}$ --- линейная.
+    Пусть $K$ -- теоретико-множественное кольцо, $\mu: K \rightarrow \mathbb{K}$ аддитивна, $E \equiv \bigcup K$, $L_0 = \{ \mathds{1}_{A \subset E} \,\big|_:\, A \in K\}, L_0 \subset \mathbb{K}^E$, $\ell_{\mu} (\mathds{1}_{A \subset E} ) = \mu (A) \,\,\forall A \in K$. $\ell_{\mu}$ -- линейная.
 \end{problem}
 
 \begin{definition}
-    Все линейные и непрерывные продолжения функционала $l_{\mu}$ называются интегралами по $\mu$
+    Все линейные и непрерывные продолжения функционала $\ell_{\mu}$ называются интегралами по $\mu$.
 \end{definition}
 
 \begin{problem}
-    На линейную оболочку $<\mathds{1}_{A \subset E}>_{\mathbb{K}}$ продолжение $l_{\mu}$ c сохранением свойства линейности едиственно и элементы $<L_0>_{\mathbb{K}}$ называются простыми интегрируемыми по $\mu$ функции на $E$.
+    На линейную оболочку $<\mathds{1}_{A \subset E}>_{\mathbb{K}}$ продолжение $\ell_{\mu}$ c сохранением свойства линейности едиственно и элементы $<L_0>_{\mathbb{K}}$ называются простыми интегрируемыми по $\mu$ функции на $E$.
 \end{problem}
 
-Если $\mu$ неотрицательная $\sigma$-аддитивная и $\sigma$-конечная на $\sigma$-алгебре $\upsigma$, то 
 
-$$\upsigma_{\text{fin,$\mu$}} = \left\{ A \in \upsigma \big|_: \mu A < + \infty \right\}$$
-(т.е. $A$ --- множество конечной меры $\mu$) является $\delta$-кольцом и простыми интегрируемыми по $\mu$ функциями называются элементы $<\left\{ \mathds{1}_{A \subset E} \big|_: A \in \upsigma_{\text{fin,$\mu$}}  \right\}>_{\mathbb{R}} = L_{1, 0} (\mu)$
+Если $\mu$ неотрицательная $\sigma$-аддитивная и $\sigma$-конечная на $\sigma$-алгебре $\text{\textscripta}$, то 
+
+$$\text{\textscripta}_{\text{fin,$\mu$}} = \left\{ A \in \text{\textscripta} \,\big|_:\, \mu A < + \infty \right\}$$
+
+(т.е. $A$ -- множество конечной меры $\mu$) является $\delta$-кольцом и простыми интегрируемыми по $\mu$ функциями называются элементы $<\left\{ \mathds{1}_{A \subset E} \,\big|_:\, A \in \text{\textscripta}_{\text{fin,$\mu$}}  \right\}>_{\mathbb{R}} = L_{1, 0} (\mu)$
 
 $$\forall f = \sum \limits_{k = 1}^{n} c_K \mathds{1}_{A_k \subset E} \in L_{1, 0}(\mu)$$ 
-такие, что $A_k \in \upsigma_{\text{fin,$\mu$}}$, $E \equiv \bigcup \upsigma $
+такие, что $A_k \in \text{\textscripta}_{\text{fin,$\mu$}}$, $E \equiv \bigcup \text{\textscripta} $
 
-$$ l_{\mu}(f) = \sum \limits_{k = 1}^{n} \mu(A_k) \equiv \int \limits_{E} f(x) \mu(dx)$$  
+$$ \ell_{\mu}(f) = \sum \limits_{k = 1}^{n} \mu(A_k) \equiv \int \limits_{E} f(x) \mu(dx)$$  
 
 \end{document}
